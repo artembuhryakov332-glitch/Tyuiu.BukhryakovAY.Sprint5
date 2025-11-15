@@ -28,7 +28,7 @@ internal class Program
             }
             funcValue = Math.Round(funcValue, 2);
             string yValue = funcValue.ToString();
-            Console.WriteLine($"  f({i,2}) = {funcValue,10:F4}");
+            Console.WriteLine($"  f({i,2}) = {funcValue}");
         }
         Console.ReadKey();
     }

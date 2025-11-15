@@ -9,7 +9,7 @@ namespace Tyuiu.BukhryakovAY.Sprint5.Task1.V13.Lib
         {
             string path = Path.Combine(Path.GetTempPath(),"OutPutFileTask1.txt");
             double funcValue = 0;
-            for(int i = startValue; i < stopValue; i++)
+            for(int i = startValue; i < stopValue + 1; i++)
             {
                 funcValue = ((2 * i - 3) / (Math.Cos(i) + i)) + 5;
                 if (double.IsInfinity(funcValue))
