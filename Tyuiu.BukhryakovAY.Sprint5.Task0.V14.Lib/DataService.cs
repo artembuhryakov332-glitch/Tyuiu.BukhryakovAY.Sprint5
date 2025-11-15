@@ -7,7 +7,7 @@ namespace Tyuiu.BukhryakovAY.Sprint5.Task0.V14.Lib
     {
         public string SaveToFileTextData(int x)
         {
-            string path = @"C:\Users\User\source\repos\Tyuiu.BukhryakovAY.Sprint5\\OutPutFileTask0.txt";
+            string path = @"C:\Users\User\source\repos\Tyuiu.BukhryakovAY.Sprint5\OutPutFileTask0.txt";
             int value = 3;
             double y = 4 * Math.Pow(value,3) / (Math.Pow(value,3) - 1);
             double result = Math.Round(y, 3);
