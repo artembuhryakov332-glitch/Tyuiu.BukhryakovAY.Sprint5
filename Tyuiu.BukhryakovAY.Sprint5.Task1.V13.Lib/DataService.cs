@@ -16,6 +16,8 @@ namespace Tyuiu.BukhryakovAY.Sprint5.Task1.V13.Lib
                 {
                    funcValue = 0;
                 }
+                funcValue = Math.Round(funcValue, 2);
+
              string result = funcValue.ToString();
              File.AppendAllText(path, $"{result}\n");
             }
