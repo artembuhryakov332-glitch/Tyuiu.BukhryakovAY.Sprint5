@@ -1,0 +1,25 @@
+﻿using tyuiu.cources.programming.interfaces;
+using tyuiu.cources.programming.interfaces.Sprint5;
+using System.IO;
+namespace Tyuiu.BukhryakovAY.Sprint5.Task1.V13.Lib
+{
+    public class DataService : ISprint5Task1V13
+    {
+        public string SaveToFileTextData(int startValue, int stopValue)
+        {
+            string path = Path.Combine(Path.GetTempPath(),"OutPutFileTask1.txt");
+            double funcValue = 0;
+            for(int i = startValue; i < stopValue; i++)
+            {
+                funcValue = ((2 * i - 3) / (Math.Cos(i) + i)) + 5;
+                if (double.IsInfinity(funcValue))
+                {
+                   funcValue = 0;
+                }
+             string result = funcValue.ToString();
+             File.AppendAllText(path, $"{result}\n");
+            }
+            return path;
+        }
+    }
+}
