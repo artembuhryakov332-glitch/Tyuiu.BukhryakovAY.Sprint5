@@ -9,7 +9,7 @@ namespace Tyuiu.BukhryakovAY.Sprint5.Task0.V14.Test
         [TestMethod]
         public void TestMethod1()
         {
-            string path = @"C:\Users\User\source\repos\Tyuiu.BukhryakovAY.Sprint5\Tyuiu.BukhryakovAY.Sprint5.Task0.V14\bin\Debug\net8.0\OutPutFileTask0.txt";
+            string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask0.txt");
             FileInfo fileInfo = new FileInfo(path);
             bool res = fileInfo.Exists;
             Assert.AreEqual(true, res);
