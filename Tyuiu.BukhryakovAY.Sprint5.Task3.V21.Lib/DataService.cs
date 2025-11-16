@@ -10,7 +10,7 @@ namespace Tyuiu.BukhryakovAY.Sprint5.Task3.V21.Lib
             double result = (Math.Pow(x, 2) + 1) / Math.Sqrt(4 * Math.Pow(x, 2) - 3);
             using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.Append))) 
             { 
-                writer.Write(result);
+                writer.Write(Math.Round(result,3));
             }
             return path;
         }
