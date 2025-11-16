@@ -9,8 +9,8 @@ namespace Tyuiu.BukhryakovAY.Sprint5.Task4.V2.Lib
         {
            string fileInfo = File.ReadAllText(path);
            double x = Convert.ToDouble(fileInfo, CultureInfo.InvariantCulture);
-           double result = ((Math.Cos(x) + 3 * x) / 0.25 * x) + 4 - 2.1 * x;
-           return Math.Round(result,3);
+            double result = (Math.Cos(x) + 3 * x) / (0.25 * x) + 4 - 2.1 * x;
+            return Math.Round(result,3);
         }
     }
 }
