@@ -9,23 +9,28 @@ namespace Tyuiu.BukhryakovAY.Sprint5.Task5.V19.Lib
     {
         public double LoadFromDataFile(string path)
         {
-            int maxValue = 0;
-            int minValue = 0;
-            int result = 0;
             string fileText = File.ReadAllText(path);
             string[] stringNumbers = fileText.Split(' ');
-            int[] numbers = new int[stringNumbers.Length];
+            List<int> singleDigitNumbers = new List<int>();
 
-            for (int i = 0; i < stringNumbers.Length; i++)
+            foreach (string str in stringNumbers)
             {
-                double temp = double.Parse(stringNumbers[i].Trim(), CultureInfo.InvariantCulture);
-                numbers[i] = (int)temp;
+                if (int.TryParse(str.Trim(), out int number))
+                {
+                    if (number >= -9 && number <= 9)
+                    {
+                        singleDigitNumbers.Add(number);
+                    }
+                }
             }
-             maxValue = numbers.Max();  
-             minValue = numbers.Min();  
-             result = maxValue - minValue;
-             return result;
+
+            if (singleDigitNumbers.Count == 0) return 0;
+
+            int maxValue = singleDigitNumbers.Max();
+            int minValue = singleDigitNumbers.Min();
+            int result = maxValue - minValue;
+            return result;
         }
-       
+
     }
 }
