@@ -1,4 +1,4 @@
-﻿using Tyuiu.BukhryakovAY.Sprint5.Task6.V22.Lib;
+﻿using Tyuiu.BukhryakovAY.Sprint5.Task7.V8.Lib;
 internal class Program
 {
     private static void Main(string[] args)
@@ -7,12 +7,12 @@ internal class Program
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                       **");
         Console.WriteLine("***************************************************************************");
-        string path = Path.Combine(Path.GetTempPath(), "InPutDataFileTask6V22.txt");
-        Console.WriteLine("Путь:C:\\DataSprint5\\InPutDataFileTask6V22.txt");
+        string path = Path.Combine(Path.GetTempPath(), "InPutDataFileTask7V8.txt");
+        Console.WriteLine("Путь:C:\\DataSprint5\\InPutDataFileTask7V8.txt");
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* Результат :                                                             **");
         Console.WriteLine("***************************************************************************");
-        double result = ds.LoadFromDataFile(path);
+        string result = ds.LoadDataAndSave(path);
         Console.WriteLine(result);
         Console.ReadKey();
     }
